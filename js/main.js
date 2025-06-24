@@ -95,7 +95,6 @@ class CookieManager {
 
     loadAnalytics() {
         console.log('Analytics loaded');
-      
     }
 
     loadMarketing() {
@@ -110,6 +109,10 @@ class NavigationManager {
         this.navMenu = document.getElementById('nav-menu');
         this.navLinks = document.querySelectorAll('.nav-link');
         this.logo = document.getElementById('logo');
+        this.mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        this.mobileNavSidebar = document.getElementById('mobile-nav-sidebar');
+        this.mobileNavClose = document.getElementById('mobile-nav-close');
+        this.mobileNavLinks = document.querySelectorAll('.mobile-nav-links .nav-link');
         this.init();
     }
 
@@ -139,33 +142,50 @@ class NavigationManager {
     }
 
     setupMobileMenu() {
-        if (this.hamburger && this.navMenu) {
+        if (this.hamburger) {
             this.hamburger.addEventListener('click', () => {
-                this.hamburger.classList.toggle('active');
-                this.navMenu.classList.toggle('active');
-                document.body.style.overflow = this.navMenu.classList.contains('active') ? 'hidden' : 'auto';
-            });
-
-            this.navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    this.hamburger.classList.remove('active');
-                    this.navMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
-                    this.hamburger.classList.remove('active');
-                    this.navMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
+                this.openMobileNav();
             });
         }
+
+        if (this.mobileNavClose) {
+            this.mobileNavClose.addEventListener('click', () => {
+                this.closeMobileNav();
+            });
+        }
+
+        if (this.mobileNavOverlay) {
+            this.mobileNavOverlay.addEventListener('click', () => {
+                this.closeMobileNav();
+            });
+        }
+
+        // Close mobile nav when clicking on links
+        this.mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeMobileNav();
+            });
+        });
+    }
+
+    openMobileNav() {
+        this.hamburger.classList.add('active');
+        this.mobileNavOverlay.classList.add('active');
+        this.mobileNavSidebar.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeMobileNav() {
+        this.hamburger.classList.remove('active');
+        this.mobileNavOverlay.classList.remove('active');
+        this.mobileNavSidebar.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 
     setupSmoothScrolling() {
-        this.navLinks.forEach(link => {
+        const allNavLinks = [...this.navLinks, ...this.mobileNavLinks];
+        
+        allNavLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
                 if (href.startsWith('#')) {
@@ -196,9 +216,16 @@ class NavigationManager {
                 
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                     this.navLinks.forEach(link => link.classList.remove('active'));
-                    const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                    this.mobileNavLinks.forEach(link => link.classList.remove('active'));
+                    
+                    const activeLink = document.querySelector(`.nav-link[href="/${sectionId}.html"]`);
+                    const activeMobileLink = document.querySelector(`.mobile-nav-links .nav-link[href="/${sectionId}.html"]`);
+
                     if (activeLink) {
                         activeLink.classList.add('active');
+                    }
+                    if (activeMobileLink) {
+                        activeMobileLink.classList.add('active');
                     }
                 }
             });
@@ -269,7 +296,7 @@ class AnimationController {
     addAnimationClasses() {
         const sections = document.querySelectorAll('section');
         sections.forEach((section, sectionIndex) => {
-            const elements = section.querySelectorAll('h2, h3, h4, p, .btn-primary, .btn-secondary, .feature-card, .menu-category-card, .gallery-item, .stat-item, .info-card, .text-block');
+            const elements = section.querySelectorAll('h2, h3, h4, p, .btn-primary, .btn-secondary, .menu-category-card, .gallery-item, .stat-item, .info-card, .text-block');
             elements.forEach((element, elementIndex) => {
                 const animationClass = this.getAnimationClass(sectionIndex, elementIndex);
                 element.classList.add(animationClass);
@@ -489,14 +516,6 @@ class GalleryManager {
                 <button class="lightbox-close">
                     <i class="fas fa-times"></i>
                 </button>
-                <div class="lightbox-nav">
-                    <button class="lightbox-prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="lightbox-next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
             </div>
         `;
         
@@ -565,15 +584,15 @@ class GalleryManager {
                 
                 .lightbox-close {
                     position: absolute;
-                    top: -20px;
-                    right: -20px;
-                    width: 50px;
-                    height: 50px;
+                    top: -15px;
+                    right: -15px;
+                    width: 40px;
+                    height: 40px;
                     background: #B8860B;
                     border: none;
                     border-radius: 50%;
                     color: white;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     cursor: pointer;
                     display: flex;
                     align-items: center;
@@ -588,51 +607,13 @@ class GalleryManager {
                     transform: scale(1.1);
                 }
                 
-                .lightbox-nav {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    right: 0;
-                    transform: translateY(-50%);
-                    display: flex;
-                    justify-content: space-between;
-                    pointer-events: none;
-                }
-                
-                .lightbox-prev,
-                .lightbox-next {
-                    width: 50px;
-                    height: 50px;
-                    background: rgba(184, 134, 11, 0.8);
-                    border: none;
-                    border-radius: 50%;
-                    color: white;
-                    font-size: 1.25rem;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.3s ease;
-                    pointer-events: auto;
-                }
-                
-                .lightbox-prev:hover,
-                .lightbox-next:hover {
-                    background: rgba(184, 134, 11, 1);
-                    transform: scale(1.1);
-                }
-                
                 @media (max-width: 768px) {
                     .lightbox-close {
                         top: 10px;
                         right: 10px;
-                        width: 40px;
-                        height: 40px;
-                        font-size: 1.25rem;
-                    }
-                    
-                    .lightbox-nav {
-                        display: none;
+                        width: 35px;
+                        height: 35px;
+                        font-size: 0.9rem;
                     }
                 }
             `;
