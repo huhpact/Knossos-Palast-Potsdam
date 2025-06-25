@@ -1,6 +1,3 @@
-/* Menu Page Specific Styles */
-
-/* Menu Navigation Section */
 .menu-nav-section {
     padding: 120px 0 var(--space-xl);
     background: linear-gradient(135deg, var(--cream), var(--white));
@@ -101,7 +98,6 @@
     color: var(--white);
 }
 
-/* Menu Filters Section */
 .menu-filters-section {
     padding: var(--space-lg) 0;
     background: var(--white);
@@ -183,7 +179,6 @@
     box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
 }
 
-/* Menu Content */
 .menu-content {
     padding: var(--space-2xl) 0;
     background: var(--cream);

@@ -1,5 +1,3 @@
-// Menu Page JavaScript
-
 class MenuManager {
     constructor() {
         this.currentMenu = 'hauptspeisekarte';
@@ -173,32 +171,270 @@ class MenuManager {
                         price: '14,50',
                         description: 'Gebratene Auberginen und Zucchini mit Knoblauch-Joghurt-Sauce und Zaziki',
                         image: '/images/auberginen.png',
-                        labels: ['glutenhaltig', 'Milch'],
+                        labels: ['glutenhaltig', 'Milch', 'Schalenfrüchte'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+										{
+                        number: '12',
+                        name: 'Gefüllte Champignons',
+                        price: '14,50',
+                        description: 'Champignons gefüllt mit Spinat und mit Fetakäse überbacken',
+                        image: '/images/champignons.png',
+                        labels: ['Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+										{
+                        number: '13',
+                        name: 'Ilios - Vorspeisen',
+                        price: '21,90',
+                        description: 'Eine große Auswahl unserer warmen Vorspeisen',
+                        image: '/images/Ilios.png',
+                        labels: ['Konservierungsstoffe', 'Antioxidationsmittel', 'Süßungsmittel', 'glutenhaltig', 'Soja', 'Milch', 'Sellerie'],
                         vegetarian: true,
                         vegan: false
                     },
                 ],
-                'Gyros und Grillspezialitäten': [
+                 'Vorspeisen aus dem Meer': [
                     {
-                        number: '50',
-                        name: 'Gyros Pita',
-                        price: '12.90',
-                        description: 'Traditionelles Gyros mit Tzatziki, Zwiebeln und Pommes im Pita-Brot',
-                        image: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Gluten', 'Milch', 'Schweinefleisch'],
+                        number: '20',
+                        name: 'Kalamariringe',
+                        price: '15,50',
+                        description: 'gebratene Kalamariringe mit Zitronen-Knoblauchsauce, dazu Zaziki',
+                        image: '/images/kalamariringe.png',
+                        labels: ['aufgetaute Fischprodukte', 'glutenhaltig', 'Schalenfrüchte', 'Milch'],
                         vegetarian: false,
                         vegan: false
                     },
                     {
-                        number: '51',
-                        name: 'Souvlaki Schwein',
-                        price: '16.80',
-                        description: 'Gegrillte Schweinefleischspieße mit griechischen Kartoffeln und Salat',
-                        image: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Schweinefleisch'],
+                        number: '21',
+                        name: 'Oktopus gegrillt',
+                        price: '19,50',
+                        description: 'gegrillter Oktopus mit Zitronen-Knoblauchsauce und hausgemachtem Brot',
+                        image: '/images/oktopus.png',
+                        labels: ['aufgetaute Fischprodukte', 'glutenhaltig', 'Schalenfrüchte', 'Milch'],
                         vegetarian: false,
                         vegan: false
+                    },
+                     {
+                        number: '23',
+                        name: 'Knoblauchbrot',
+                        price: '5,90',
+                        description: 'Knoblauchbrot nach Art des Hauses',
+                        image: '/images/knoblauchbrot.png',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '24',
+                        name: 'Pitabrot',
+                        price: '4,90',
+                        description: 'deftiges Fladenbrot vom Grill',
+                        image: '/images/Pita.png',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '25',
+                        name: 'Pitabrot mit Feta',
+                        price: '7,50',
+                        description: 'deftiges Fladenbrot vom Grill mit Fetakäse',
+                        image: '/images/gpita-feta.png',
+                        labels: ['glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
                     }
+                ],
+
+                 'Suppen': [
+                    {
+                        number: '27',
+                        name: 'Tomatensuppe',
+                        price: '6,90',
+                        description: 'gebratene Kalamariringe mit Zitronen-Knoblauchsauce, dazu Zaziki',
+                        image: '/images/kalamariringe.png',
+                        labels: ['Konservierungsstoffe', 'glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '28',
+                        name: 'Bohnensuppe',
+                        price: '6,90',
+                        description: 'gegrillter Oktopus mit Zitronen-Knoblauchsauce und hausgemachtem Brot',
+                        image: '/images/halloumi.png',
+                        labels: ['Antioxidationsmittel', 'glutenhaltig', 'Soja'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '23',
+                        name: 'Knoblauchbrot',
+                        price: '5,90',
+                        description: 'Knoblauchbrot nach Art des Hauses',
+                        image: '/images/gegr-feta.png',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                'Gyros und Grillspezialitäten': [
+                    {
+                        number: '40',
+                        name: 'Gyros-Klassik',
+                        price: '20,90',
+                        description: 'geschnetzeltes Schweinefleisch, serviert mit Zaziki und Knoblauchkartoffeln',
+                        image: '/images/gyros-klassik.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '41',
+                        name: 'Gyros Klassik - kleine Portion',
+                        price: '16,90',
+                        description: 'geschnetzeltes Schweinefleisch, serviert mit Zaziki und Knoblauchkartoffeln',
+                        image: '/images/gyros-klassik.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+					{
+                        number: '42',
+                        name: 'Bifteki',
+                        price: '22,90',
+                        description: 'Würzig gegrillte Hacksteaks mit original griechischem Fetakäse gefüllt, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/bifteki.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '43',
+                        name: 'Bifteki - kleine Portion',
+                        price: '17,90',
+                        description: 'Würzig gegrillte Hacksteaks mit original griechischem Fetakäse gefüllt, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/bifteki.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '44',
+                        name: 'Souvlaki',
+                        price: '22,50',
+                        description: 'Zwei gegrillte Schweinefleisch-Spieße mit Fetakäse, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/souvlaki.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '45',
+                        name: 'Souvlaki - kleine Portion',
+                        price: '17,90',
+                        description: 'Zwei gegrillte Schweinefleisch-Spieße mit Fetakäse, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/souvlaki.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '46',
+                        name: 'Hähnchenbrustfilet',
+                        price: '22,90',
+                        description: 'Hähnchenbrustfilet vom Grill, serviert mit Zaziki, griechischen Reisnudeln & Kräuterbutter',
+                        image: '/images/haenchenbrust.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '47',
+                        name: 'Hähnchenbrustfilet - kleine Portion',
+                        price: '17,50',
+                        description: 'Hähnchenbrustfilet vom Grill, serviert mit Zaziki, griechischen Reisnudeln & Kräuterbutter',
+                        image: '/images/haenchenbrust.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '48',
+                        name: 'Kalbsleber',
+                        price: '27,50',
+                        description: 'gegrillte Kalbsleber mit gerösteten Zwiebeln, Backkartoffeln und Apfelscheiben, mit Knoblauch',
+                        image: '/images/kalbsleber.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '49',
+                        name: 'Schweinemedaillions',
+                        price: '26,90',
+                        description: 'Zarte Schweinemedaillions vom Grill mit Metaxasauce und Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/schweinemedaillions.png',
+                        labels: ['Milch', 'Farbstoffe', 'glutenhaltig'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '52',
+                        name: 'Fileto Gemisto',
+                        price: '26,90',
+                        description: 'Hähnchenbrustfilet gefüllt mit Spinat, dazu Fetakäse, Champignonsauce und Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/fileto.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+
+                ],
+                'Käse-Spezialitäten': [
+                    {
+                        number: '15',
+                        name: 'Chtipiti',
+                        price: '11,90',
+                        description: 'Fetakäse mit scharfer Paprika serviert',
+                        image: '/images/chtipiti.png',
+                        labels: ['Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '16',
+                        name: 'Halloumi',
+                        price: '13,90',
+                        description: 'gegrillter Käse aus Zypern, serviert mit Tomaten & Olivenöl',
+                        image: '/images/halloumi.png',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '17',
+                        name: 'Fetakäse im Ofen',
+                        price: '14,50',
+                        description: 'original griechischer Fetakäse mit Zwiebeln, Cherrytomaten, Peperoni und Olivenöl, im Ofen überbacken',
+                        image: '/images/gegr-feta.png',
+                        labels: ['Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '18',
+                        name: 'Ziegenkäse',
+                        price: '13,90',
+                        description: 'Ziegenkäse im Blätterteig mit Honig und Sesam verfeinert',
+                        image: '/images/ziegenkaese.png',
+                        labels: ['glutenhaltig', 'Milch', 'Sesamsamen'],
+                        vegetarian: true,
+                        vegan: false
+                    },
                 ],
                 'Traditionelle griechische Küche': [
                     {
@@ -392,6 +628,8 @@ class MenuManager {
         });
     }
 
+    
+
     setupBackToTop() {
         const backToTopBtn = document.getElementById('back-to-top');
         
@@ -425,20 +663,17 @@ class MenuManager {
             });
         }, observerOptions);
 
-        // Observe categories as they're created
         this.observeCategories = (categories) => {
             categories.forEach(category => observer.observe(category));
         };
     }
 
     switchMenu(menuType) {
-        // Update active tab
         document.querySelectorAll('.menu-tab').forEach(tab => {
             tab.classList.remove('active');
         });
         document.querySelector(`[data-menu="${menuType}"]`).classList.add('active');
 
-        // Update active section
         document.querySelectorAll('.menu-section').forEach(section => {
             section.classList.remove('active');
         });
@@ -449,7 +684,6 @@ class MenuManager {
     }
 
     setFilter(filter) {
-        // Update active filter button
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.classList.remove('active');
         });
@@ -470,11 +704,9 @@ class MenuManager {
             container.appendChild(categoryElement);
         });
 
-        // Setup scroll animations for new categories
         const categories = container.querySelectorAll('.menu-category');
         this.observeCategories(categories);
 
-        // Setup item interactions
         this.setupItemInteractions();
         this.filterItems();
     }
@@ -487,9 +719,9 @@ class MenuManager {
             'Aperitif': 'fas fa-wine-glass',
             'Kalte Vorspeisen': 'fas fa-snowflake',
             'Warme Vorspeisen': 'fas fa-fire',
-            'Käse Spezialitäten': 'fas fa-cheese',
+            'Käse-Spezialitäten': 'fas fa-cheese',
             'Vorspeisen aus dem Meer': 'fas fa-fish',
-            'Suppen': 'fas fa-bowl-hot',
+            'Suppen': 'fa-solid fa-bowl-food',
             'Salate': 'fas fa-leaf',
             'Gyros und Grillspezialitäten': 'fas fa-fire-flame-curved',
             'Gemischte Fleischplatten vom grill': 'fas fa-drumstick-bite',
@@ -586,13 +818,11 @@ class MenuManager {
 
     toggleItem(item) {
         const isExpanded = item.classList.contains('expanded');
-        
-        // Close currently expanded item
+   
         if (this.expandedItem && this.expandedItem !== item) {
             this.expandedItem.classList.remove('expanded');
         }
 
-        // Toggle current item
         if (isExpanded) {
             item.classList.remove('expanded');
             this.expandedItem = null;
@@ -612,14 +842,12 @@ class MenuManager {
             
             let showItem = true;
 
-            // Filter by dietary preference
             if (this.currentFilter === 'vegetarian' && !isVegetarian) {
                 showItem = false;
             } else if (this.currentFilter === 'vegan' && !isVegan) {
                 showItem = false;
             }
 
-            // Filter by search term
             if (this.searchTerm && !itemName.includes(this.searchTerm)) {
                 showItem = false;
             }
@@ -639,7 +867,6 @@ class MenuManager {
     }
 }
 
-// Initialize menu manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new MenuManager();
 });

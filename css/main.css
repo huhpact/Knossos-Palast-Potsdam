@@ -2573,6 +2573,30 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
+.footer-logo {
+    height: 150px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-brand {
+        justify-content: center;
+    }
+    .brand-logo {
+        margin-bottom: var(--space-lg);
+    }
+    
+}
+
 .footer .logo-symbol {
     position: absolute;
     top: 50%;
