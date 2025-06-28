@@ -160,7 +160,6 @@ class NavigationManager {
             });
         }
 
-        // Close mobile nav when clicking on links
         this.mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 this.closeMobileNav();
@@ -446,11 +445,11 @@ class ReservationManager {
                     <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #B8860B, #8B6914); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h4 style="color: #1B365D; margin-bottom: 1rem; font-family: 'Skranji', cursive;">Online-Reservierung temporär nicht verfügbar</h4>
-                    <p style="color: #718096; margin-bottom: 1.5rem;">Bitte rufen Sie uns direkt an für Ihre Reservierung:</p>
-                    <a href="tel:+491234567890" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #1B365D; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                    <h4 style="color: #5C0F14; margin-bottom: 1rem; font-family: 'Skranji', cursive;">Online-Reservierung temporär nicht verfügbar</h4>
+                    <p style="color: #B22222; margin-bottom: 1.5rem;">Bitte rufen Sie uns direkt an für Ihre Reservierung:</p>
+                    <a href="tel:03315506743" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #400A0D; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
                         <i class="fas fa-phone"></i>
-                        <span>+49 123 456 7890</span>
+                        <span>0331 5506743</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -723,7 +722,7 @@ function openGalleryPage() {
     setTimeout(() => {
         const notification = document.createElement('div');
         notification.innerHTML = `
-            <div style="position: fixed; top: 20px; right: 20px; background: #1B365D; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1001; max-width: 400px;">
+            <div style="position: fixed; top: 20px; right: 20px; background: #5C0F14; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1001; max-width: 400px;">
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-info-circle"></i>
                     <span>Vollständige Galerie wird in Kürze verfügbar sein!</span>

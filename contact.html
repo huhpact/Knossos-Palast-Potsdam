@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisekarte - Knossos Palast | Authentische griechische Küche</title>
-    <meta name="description" content="Entdecken Sie unsere vielfältige Speisekarte mit authentischen griechischen Spezialitäten, Kinderkarte, Eiskarte und besonderen Highlights.">
-    <meta name="keywords" content="Speisekarte, griechische Küche, Knossos Palast, Hauptspeisen, Kinderkarte, Eiskarte, Highlights">
+    <title>Kontakt - Knossos Palast | Authentische griechische Küche</title>
+    <meta name="description" content="Kontaktieren Sie das Knossos Palast Restaurant. Reservierungen, Öffnungszeiten, Adresse und alle Kontaktmöglichkeiten auf einen Blick.">
+    <meta name="keywords" content="Kontakt, Reservierung, Knossos Palast, griechisches Restaurant, Öffnungszeiten, Adresse">
     <meta name="author" content="Knossos Palast">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://knossos-palast.de/menu">
+    <link rel="canonical" href="https://knossos-palast.de/contact">
     
     <link rel="icon" type="image/x-icon" href="/images/Knossos Palast.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/contact.css">
 </head>
 <body>
      <div id="cookie-banner" class="cookie-banner">
@@ -86,7 +86,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/contact.html" class="nav-link">
+                <a href="/contact.html" class="nav-link active">
                     <i class="bx bx-envelope nav-icon"></i>
                     <span class="nav-text">Kontakt</span>
                 </a>
@@ -143,7 +143,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contact.html" class="nav-link">
+                        <a href="/contact.html" class="nav-link active">
                             <span class="nav-text">Kontakt</span>
                             <div class="nav-underline">
                                 <div class="underline-left"></div>
@@ -155,7 +155,7 @@
                 </ul>
                 
                 <div class="nav-actions">
-                    <button class="reservation-btn" onclick="window.location.href='/contact.html'">
+                    <button class="reservation-btn" onclick="scrollToSection('reservation')">
                         <div class="btn-content">
                             <i class="fas fa-calendar-check"></i>
                             <span>Reservieren</span>
@@ -172,86 +172,204 @@
         </nav>
     </header>
 
-    <section class="menu-nav-section">
+    <section class="hero">
         <div class="container">
-            <div class="menu-nav-header">
-                <h1 class="menu-title">Unsere Speisekarten</h1>
-                <p class="menu-subtitle">Entdecken Sie die Vielfalt der authentischen griechischen Küche</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Kontakt & Reservierung</h1>
+                <p class="hero-subtitle">Wir freuen uns auf Ihren Besuch im Knossos Palast</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToSection('contact-info')">
+                        <div class="btn-content">
+                            <i class="fas fa-phone"></i>
+                            <span>Kontakt aufnehmen</span>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('reservation')">
+                        <div class="btn-content">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Tisch reservieren</span>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cards">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card fade-in-up">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <p>Rufen Sie uns an</p>
+                    <a href="tel:03315506743" class="card-link">0331 550 67 43</a>
+                </div>
+
+                <div class="contact-card fade-in-up">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-Mail</h3>
+                    <p>Schreiben Sie uns</p>
+                    <a href="mailto:info@knossos-palast-potsdam.de" class="card-link">info@knossos-palast-potsdam.de</a>
+                </div>
+
+                <div class="contact-card fade-in-up">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adresse</h3>
+                    <p>Besuchen Sie uns</p>
+                    <div class="card-link">Potsdamer Str. 37<br>14469 Potsdam</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tisch reservieren</h2>
+                <p class="section-subtitle">Reservieren Sie bequem online Ihren Tisch</p>
             </div>
             
-            <div class="menu-nav-tabs">
-                <button class="menu-tab active" data-menu="hauptspeisekarte">
-                    <i class="fas fa-utensils"></i>
-                    <span>Hauptspeisekarte</span>
-                </button>
-                <button class="menu-tab" data-menu="kinderkarte">
-                    <i class="fas fa-child"></i>
-                    <span>Kinderkarte</span>
-                </button>
-                <button class="menu-tab" data-menu="eiskarte">
-                    <i class="fas fa-ice-cream"></i>
-                    <span>Eiskarte</span>
-                </button>
-                <button class="menu-tab" data-menu="highlightkarte">
-                    <i class="fas fa-star"></i>
-                    <span>Highlights</span>
-                </button>
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <div class="info-item slide-in-left">
+                        <div class="info-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Authentische Küche</h4>
+                            <p>Traditionelle griechische Spezialitäten aus frischen Zutaten</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item slide-in-left">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Für jeden Anlass</h4>
+                            <p>Romantisches Dinner oder große Familienfeier</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item slide-in-left">
+                        <div class="info-icon">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Erlesene Weine</h4>
+                            <p>Griechische und internationale Weine</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-images">
+                        <div class="image-item">
+                            <img src="/images/photo1.jpg" alt="Restaurant" loading="lazy">
+                        </div>
+                        <div class="image-item">
+                            <img src="/images/photo2.jpg" alt="Food" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reservation-widget slide-in-right">
+                    <div class="widget-header">
+                        <h3>Online Reservierung</h3>
+                        <p>Wählen Sie Datum und Uhrzeit</p>
+                    </div>
+                    <div id="reservation-form" class="reservation-form">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="menu-filters-section">
+    <section id="contact-info" class="contact-info">
         <div class="container">
-            <div class="menu-filters">
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-list"></i>
-                        <span>Alle</span>
-                    </button>
-                    <button class="filter-btn" data-filter="vegetarian">
-                        <i class="fas fa-leaf"></i>
-                        <span>Vegetarisch</span>
-                    </button>
-                    <button class="filter-btn" data-filter="vegan">
-                        <i class="fas fa-seedling"></i>
-                        <span>Vegan</span>
-                    </button>
+            <div class="contact-info-content">
+                <div class="contact-details">
+                    <div class="section-header">
+                        <h2 class="section-title">Kontaktinformationen</h2>
+                        <p class="section-subtitle">Alle wichtigen Informationen für Ihren Besuch</p>
+                    </div>
+
+                    <div class="details-list">
+                        <div class="detail-item slide-in-left">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Adresse</h4>
+                                <p>Potsdamer Str. 37<br>14469 Potsdam<br>Deutschland</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item slide-in-left">
+                            <div class="detail-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Telefon</h4>
+                                <p><a href="tel:03315506743">0331 5506743</a></p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item slide-in-left">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>E-Mail</h4>
+                                <p><a href="mailto:info@knossos-palast-potsdam.de">info@knossos-palast-potsdam.de</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="menu-search" placeholder="Gericht suchen...">
+
+                <div class="contact-visual">
+                    <div class="gallery">
+                        <div class="gallery-main scale-in">
+                            <img src="/images/photo7.jpg" alt="Restaurant" loading="lazy">
+                            <div class="image-overlay">
+                                <h4>Unser Restaurant</h4>
+                                <p>Gemütliche Atmosphäre für jeden Anlass</p>
+                            </div>
+                        </div>
+                        <div class="gallery-small">
+                            <div class="small-image scale-in">
+                                <img src="/images/photo3.jpg" alt="Food" loading="lazy">
+                            </div>
+                            <div class="small-image scale-in">
+                                <img src="/images/photo4.jpg" alt="Interior" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media slide-in-right">
+                        <h4>Folgen Sie uns</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/knossos_palast_potsdam_/" class="social-link instagram" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@knossos.palast_potsdam" class="social-link tiktok" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <main class="menu-content">
-        <div class="container">
-            <section id="hauptspeisekarte" class="menu-section active">
-                <div class="menu-categories" id="hauptspeisekarte-content">
-                </div>
-            </section>
-
-            <section id="kinderkarte" class="menu-section">
-                <div class="menu-categories" id="kinderkarte-content">
-                </div>
-            </section>
-
-            <section id="eiskarte" class="menu-section">
-                <div class="menu-categories" id="eiskarte-content">
-                </div>
-            </section>
-
-            <section id="highlightkarte" class="menu-section">
-                <div class="menu-categories" id="highlightkarte-content">
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
 
      <footer class="footer">
         <div class="footer-bg">
@@ -389,7 +507,12 @@
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script src="/js/main.js"></script>
-    <script src="/js/menu.js"></script>
+    <script src="/js/contact.js"></script>
 </body>
 </html>

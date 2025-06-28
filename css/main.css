@@ -1,5 +1,3 @@
-/* Knossos Palast Main Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,10 +28,10 @@ body {
     --light-gold: #DAA520;
     --accent-gold: #F4D03F;
     
-    --deep-blue: #1B365D;
-    --navy-blue: #2C5282;
-    --royal-blue: #3182CE;
-    --light-blue: #4299E1;
+    --deep-blue: #5C0F14;
+    --navy-blue: #400A0D;
+    --royal-blue: #8B1C23;
+    --light-blue: #B22222;
     
     --charcoal: #2D3748;
     --dark-gray: #4A5568;
@@ -159,7 +157,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
-/* Cookie Banner */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -264,7 +261,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
-/* Mobile Navigation Overlay */
 .mobile-nav-overlay {
     position: fixed;
     top: 0;
@@ -283,7 +279,6 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
 }
 
-/* Mobile Navigation Sidebar */
 .mobile-nav-sidebar {
     position: fixed;
     top: 0;
@@ -354,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     color: var(--charcoal);
     text-decoration: none;
     font-weight: 500;
@@ -381,7 +376,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
-/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -419,7 +413,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
-/* Logo - Overlapping on the left */
 .logo {
     position: absolute;
     left: 2rem;
@@ -452,7 +445,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 15px 40px rgba(184, 134, 11, 0.3);
 }
 
-/* Navigation Menu - Centered */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -521,7 +513,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
-/* Navigation Actions */
 .nav-actions {
     position: absolute;
     right: 2rem;
@@ -589,7 +580,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 1px;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
@@ -791,6 +781,390 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-fast);
 }
 
+  .knossos-reservation-section {
+            padding: var(--space-4xl) 0;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--white) 50%, var(--light-gray) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .knossos-reservation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 2px 2px, var(--royal-blue) 1px, transparent 0);
+            background-size: 60px 60px;
+            opacity: 0.03;
+            z-index: 0;
+        }
+
+        .knossos-reservation-container {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .knossos-reservation-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .knossos-reservation-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--royal-blue);
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            position: relative;
+        }
+
+        .knossos-reservation-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--deep-blue), var(--light-blue));
+            border-radius: 2px;
+        }
+
+        .knossos-reservation-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--medium-gray);
+            margin-bottom: var(--space-lg);
+            line-height: 1.5;
+            font-weight: 400;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .knossos-form-wrapper {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(92, 15, 20, 0.1);
+        }
+
+        .knossos-form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--deep-blue), var(--primary-gold));
+        }
+
+        .knossos-form-header {
+            background: linear-gradient(135deg, var(--deep-blue), var(--dark-wine));
+            padding: var(--space-lg) var(--space-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .knossos-form-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+            opacity: 0.2;
+        }
+
+        .knossos-form-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+            color: var(--deep-blue);
+            font-size: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .knossos-form-title {
+            font-family: var(--font-heading);
+            color: var(--white);
+            font-size: 1.75rem;
+            margin-bottom: var(--space-xs);
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .knossos-form-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .knossos-reservation-form {
+            padding: var(--space-xl);
+        }
+
+        .knossos-form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .knossos-form-group {
+            position: relative;
+            margin-bottom: var(--space-md);
+        }
+
+        .knossos-form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+        }
+
+        .knossos-form-input-wrapper {
+            position: relative;
+        }
+
+        .knossos-form-icon-left {
+            position: absolute;
+            left: var(--space-sm);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-gold);
+            font-size: 1rem;
+            z-index: 2;
+        }
+
+        .knossos-form-input,
+        .knossos-form-textarea {
+            width: 100%;
+            padding: var(--space-sm) var(--space-sm) var(--space-sm) calc(var(--space-sm) * 3);
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-family: var(--font-primary);
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            background: var(--white);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+
+        .knossos-form-textarea {
+            min-height: 100px;
+            resize: vertical;
+            padding-left: calc(var(--space-sm) * 3);
+        }
+
+        .knossos-form-input:focus,
+        .knossos-form-textarea:focus {
+            outline: none;
+            border-color: var(--royal-blue);
+            box-shadow: 0 0 0 2px rgba(92, 15, 20, 0.1);
+        }
+
+        .knossos-form-input:hover,
+        .knossos-form-textarea:hover {
+            border-color: var(--primary-gold);
+        }
+
+        .knossos-form-input::placeholder,
+        .knossos-form-textarea::placeholder {
+            color: var(--medium-gray);
+            opacity: 0.7;
+            font-style: italic;
+        }
+
+        .knossos-form-textarea-wrapper {
+            position: relative;
+        }
+
+        .knossos-form-textarea-icon {
+            position: absolute;
+            left: var(--space-sm);
+            top: var(--space-sm);
+            color: var(--primary-gold);
+            font-size: 1rem;
+        }
+
+        .knossos-form-submit {
+            display: block;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(135deg, var(--deep-blue), var(--royal-blue));
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(92, 15, 20, 0.2);
+            margin-top: var(--space-md);
+        }
+
+        .knossos-form-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .knossos-form-submit:hover {
+            background: linear-gradient(135deg, var(--deep-blue), var(--royal-blue));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(92, 15, 20, 0.3);
+        }
+
+        .knossos-form-submit:hover::before {
+            left: 100%;
+        }
+
+        .knossos-form-submit:active {
+            transform: translateY(0);
+        }
+
+        .knossos-form-footer {
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--light-gray);
+            text-align: center;
+            color: var(--medium-gray);
+            font-size: 0.85rem;
+        }
+
+        .knossos-form-footer p {
+            margin-bottom: var(--space-xs);
+        }
+
+        .knossos-form-footer a {
+            color: var(--light-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .knossos-form-footer a:hover {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        .knossos-form-required {
+            color: var(--royal-blue);
+            margin-left: var(--space-xs);
+        }
+
+        @media (max-width: 768px) {
+            .knossos-reservation-section {
+                padding: var(--space-2xl) 0;
+            }
+            
+            .knossos-form-row {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+                margin-bottom: var(--space-sm);
+            }
+            
+            .knossos-reservation-form {
+                padding: var(--space-lg);
+            }
+            
+            .knossos-form-header {
+                padding: var(--space-md);
+            }
+            
+            .knossos-form-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+                margin-bottom: var(--space-sm);
+            }
+            
+            .knossos-form-title {
+                font-size: 1.5rem;
+            }
+            
+            .knossos-form-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .knossos-reservation-section {
+                padding: var(--space-xl) 0;
+            }
+            
+            .knossos-reservation-form {
+                padding: var(--space-md);
+            }
+            
+            .knossos-form-header {
+                padding: var(--space-sm);
+            }
+            
+            .knossos-form-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .knossos-form-title {
+                font-size: 1.25rem;
+            }
+            
+            .knossos-form-subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .knossos-form-input,
+            .knossos-form-textarea {
+                padding: var(--space-xs) var(--space-xs) var(--space-xs) calc(var(--space-xs) * 3);
+                font-size: 0.9rem;
+            }
+            
+            .knossos-form-icon-left {
+                left: var(--space-xs);
+                font-size: 0.9rem;
+            }
+            
+            .knossos-form-submit {
+                padding: var(--space-sm);
+                font-size: 0.9rem;
+            }
+            
+            .knossos-form-footer {
+                font-size: 0.75rem;
+            }
+        }
+
 .btn-shine {
     position: absolute;
     top: 0;
@@ -830,7 +1204,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Section Backgrounds */
 .section-bg {
     position: absolute;
     top: 0;
@@ -865,7 +1238,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 30px 30px;
 }
 
-/* About Section */
 .about {
     padding: var(--space-4xl) 0;
     background: var(--white);
@@ -1099,7 +1471,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.6;
 }
 
-/* Menu Section */
 .menu {
     padding: var(--space-4xl) 0;
     background: var(--cream);
@@ -1289,7 +1660,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleX(1);
 }
 
-/* Gallery Section */
 .gallery {
     padding: var(--space-4xl) 0;
     background: var(--white);
@@ -1465,7 +1835,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
-/* Events Section */
 .events {
     padding: var(--space-4xl) 0;
     background: var(--cream);
@@ -1737,7 +2106,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 
-/* Gutschein Section */
 .gutschein {
     padding: var(--space-4xl) 0;
     background: var(--white);
@@ -2036,7 +2404,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleX(1);
 }
 
-/* Reservation Section */
 .reservation {
     padding: var(--space-4xl) 0;
     background: var(--cream);
@@ -2342,7 +2709,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
 }
 
-/* Contact Section */
 .contact {
     padding: var(--space-4xl) 0;
     background: var(--white);
@@ -2517,7 +2883,6 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 
-/* Footer */
 .footer {
     background: var(--charcoal);
     color: var(--white);
@@ -2848,7 +3213,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.6;
 }
 
-/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -2915,7 +3279,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotateY(0deg);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .container {
         padding: 0 var(--space-md);

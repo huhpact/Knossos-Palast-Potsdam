@@ -452,7 +452,6 @@
     transform: scale(1.05);
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: var(--space-xl);
@@ -484,7 +483,6 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .item-content-inner {
         grid-template-columns: 1fr 220px;
