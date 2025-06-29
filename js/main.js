@@ -787,3 +787,9 @@ if ('performance' in window) {
         }, 0);
     });
 }
+
+document.querySelectorAll('.scroll-container').forEach(el => {
+  el.addEventListener('wheel', function(e) {
+    e.preventDefault();
+  }, { passive: false });
+});
