@@ -905,7 +905,7 @@ h1, h2, h3, h4, h5, h6 {
 
         .knossos-form-title {
             font-family: var(--font-heading);
-            color: var(--white);
+            color: var(--deep-blue);
             font-size: 1.75rem;
             margin-bottom: var(--space-xs);
             font-weight: 700;
