@@ -196,6 +196,48 @@ class MenuManager {
                         vegan: false
                     },
                 ],
+                 'Käse-Spezialitäten': [
+                    {
+                        number: '15',
+                        name: 'Chtipiti',
+                        price: '11,90',
+                        description: 'Fetakäse mit scharfer Paprika serviert',
+                        image: '/images/chtipiti.png',
+                        labels: ['Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '16',
+                        name: 'Halloumi',
+                        price: '13,90',
+                        description: 'gegrillter Käse aus Zypern, serviert mit Tomaten & Olivenöl',
+                        image: '/images/halloumi.png',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '17',
+                        name: 'Fetakäse im Ofen',
+                        price: '14,50',
+                        description: 'original griechischer Fetakäse mit Zwiebeln, Cherrytomaten, Peperoni und Olivenöl, im Ofen überbacken',
+                        image: '/images/gegr-feta.png',
+                        labels: ['Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '18',
+                        name: 'Ziegenkäse',
+                        price: '13,90',
+                        description: 'Ziegenkäse im Blätterteig mit Honig und Sesam verfeinert',
+                        image: '/images/ziegenkaese.png',
+                        labels: ['glutenhaltig', 'Milch', 'Sesamsamen'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                ],
                  'Vorspeisen aus dem Meer': [
                     {
                         number: '20',
@@ -254,8 +296,8 @@ class MenuManager {
                         number: '27',
                         name: 'Tomatensuppe',
                         price: '6,90',
-                        description: 'gebratene Kalamariringe mit Zitronen-Knoblauchsauce, dazu Zaziki',
-                        image: '/images/kalamariringe.png',
+                        description: 'Griechische Tomatensuppe mit frischen Kräutern und Gemüse',
+                        image: '/images/tomatensuppe.jpg',
                         labels: ['Konservierungsstoffe', 'glutenhaltig'],
                         vegetarian: true,
                         vegan: true
@@ -264,21 +306,63 @@ class MenuManager {
                         number: '28',
                         name: 'Bohnensuppe',
                         price: '6,90',
-                        description: 'gegrillter Oktopus mit Zitronen-Knoblauchsauce und hausgemachtem Brot',
-                        image: '/images/halloumi.png',
+                        description: 'Griechische Bohnensuppe mit frischen Kräutern und Gemüse',
+                        image: '/images/bohnensuppe.jpg',
                         labels: ['Antioxidationsmittel', 'glutenhaltig', 'Soja'],
                         vegetarian: true,
                         vegan: true
                     },
                      {
-                        number: '23',
-                        name: 'Knoblauchbrot',
-                        price: '5,90',
-                        description: 'Knoblauchbrot nach Art des Hauses',
-                        image: '/images/gegr-feta.png',
-                        labels: ['glutenhaltig'],
+                        number: '29',
+                        name: 'Zwiebelsuppe',
+                        price: '6,90',
+                        description: 'Griechische Zwiebelsuppe mit Käse überbacken',
+                        image: '/images/zwiebelsuppe.jpg',
+                        labels: ['Antioxidationsmittel', 'glutenhaltig', 'Soja'],
                         vegetarian: true,
                         vegan: true
+                    }
+                ],
+                 'Salate': [
+                    {
+                        number: '30',
+                        name: 'Choriatiki Salat',
+                        price: '16,50',
+                        description: 'original griechischer Bauernsalat mit Tomaten, Gurken, Paprika, Feta, Oliven, Olivenöl, serviert mit Brot',
+                        image: '/images/choriatiki.jpg',
+                        labels: ['Farbstoffe', 'Konservierungsstoffe', 'Süßungsmittel', 'glutenhaltig', 'Milch', 'Senf'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '31',
+                        name: 'Greek-Duett-Salat',
+                        price: '24,90',
+                        description: 'frischer Saisonsalat mit Lammspieß vom Grill, Ziegenkäse in Blätterteig, Tomaten, Gurken und Paprika an hausgemachtem Dressing und Brot',
+                        image: '/images/greek-duet.jpg',
+                        labels: ['Farbstoffe', 'Konservierungsstoffe', 'Süßungsmittel', 'glutenhaltig', 'Milch', 'Senf'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '32',
+                        name: 'Iraklio Salat',
+                        price: '24,90',
+                        description: 'frischer Saisonsalat mit gegrilltem Lachsfilet, Tomaten, Gurke und Paprika an hausgemachtem Dressing und Brot',
+                        image: '/images/iraklio.jpg',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'glutenhaltig', 'Senf'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '33',
+                        name: 'Salat des Hauses',
+                        price: '20,90',
+                        description: 'frischer Saisonsalat mit gegrilltem Hühnerfilet, Tomaten, Gurke und Paprika an hausgemachtem Dressing und Brot',
+                        image: '/images/salat-haus.jpg',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'glutenhaltig', 'Senf'],
+                        vegetarian: false,
+                        vegan: false
                     }
                 ],
                 'Gyros und Grillspezialitäten': [
@@ -394,69 +478,57 @@ class MenuManager {
                     },
 
                 ],
-                'Käse-Spezialitäten': [
+                'Gemischte Fleischplatten vom Grill': [
                     {
-                        number: '15',
-                        name: 'Chtipiti',
-                        price: '11,90',
-                        description: 'Fetakäse mit scharfer Paprika serviert',
-                        image: '/images/chtipiti.png',
+                        number: '56',
+                        name: 'Chania Teller',
+                        price: '22,90',
+                        description: 'Gyros, Souvlaki, Zaziki und Knoblauchkartoffeln',
+                        image: '/images/chania.jpg',
                         labels: ['Milch'],
-                        vegetarian: true,
-                        vegan: false
-                    },
-                    {
-                        number: '16',
-                        name: 'Halloumi',
-                        price: '13,90',
-                        description: 'gegrillter Käse aus Zypern, serviert mit Tomaten & Olivenöl',
-                        image: '/images/halloumi.png',
-                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'Milch'],
-                        vegetarian: true,
-                        vegan: false
-                    },
-                     {
-                        number: '17',
-                        name: 'Fetakäse im Ofen',
-                        price: '14,50',
-                        description: 'original griechischer Fetakäse mit Zwiebeln, Cherrytomaten, Peperoni und Olivenöl, im Ofen überbacken',
-                        image: '/images/gegr-feta.png',
-                        labels: ['Milch'],
-                        vegetarian: true,
-                        vegan: false
-                    },
-                     {
-                        number: '18',
-                        name: 'Ziegenkäse',
-                        price: '13,90',
-                        description: 'Ziegenkäse im Blätterteig mit Honig und Sesam verfeinert',
-                        image: '/images/ziegenkaese.png',
-                        labels: ['glutenhaltig', 'Milch', 'Sesamsamen'],
-                        vegetarian: true,
-                        vegan: false
-                    },
-                ],
-                'Traditionelle griechische Küche': [
-                    {
-                        number: '70',
-                        name: 'Moussaka',
-                        price: '18.90',
-                        description: 'Geschichteter Auflauf mit Auberginen, Hackfleisch und Béchamel-Sauce',
-                        image: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Gluten', 'Milch', 'Eier', 'Rindfleisch'],
                         vegetarian: false,
                         vegan: false
                     },
                     {
-                        number: '71',
-                        name: 'Pastitsio',
-                        price: '17.50',
-                        description: 'Griechischer Nudelauflauf mit Hackfleisch und Käse überbacken',
-                        image: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Gluten', 'Milch', 'Eier', 'Rindfleisch'],
+                        number: '57',
+                        name: 'Grill Teller',
+                        price: '24,50',
+                        description: 'Gyros, Souvlaki, Suzuki, Knoblauchkartoffeln und Zaziki',
+                        image: '/images/grill-teller.jpg',
+                        labels: ['Milch'],
                         vegetarian: false,
                         vegan: false
-                    }
+                    },
+                    {
+                        number: '58',
+                        name: 'Lasithi Teller',
+                        price: '23,90',
+                        description: 'Gyros, Bifteki gefüllt mit original griechischem Fetakäse, Zaziki und griechischen Reisnudeln',
+                        image: '/images/lasithi.jpg',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '59',
+                        name: 'Metsovo Piato',
+                        price: '25,50',
+                        description: 'Gyros, Hähnchenbrustfilet, Kalbsleber, Zaziki und Rosmarinkartoffeln',
+                        image: '/images/metsovo.png',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                      {
+                        number: '60',
+                        name: 'Amnissos Teller',
+                        price: '26,50',
+                        description: 'Gyros, Schweinefiletmedaillons, Hähnchenbrustfilet, Zaziki und Rosmarinkartoffeln',
+                        image: '/images/amnissos.jpg',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
                 ],
                 'Desserts': [
                     {
@@ -724,7 +796,7 @@ class MenuManager {
             'Suppen': 'fa-solid fa-bowl-food',
             'Salate': 'fas fa-leaf',
             'Gyros und Grillspezialitäten': 'fas fa-fire-flame-curved',
-            'Gemischte Fleischplatten vom grill': 'fas fa-drumstick-bite',
+            'Gemischte Fleischplatten vom Grill': 'fas fa-drumstick-bite',
             'Schnitzel': 'fas fa-cutlery',
             'Traditionelle griechische Küche': 'fas fa-home',
             'Pfännchen-Spezialitäten': 'fas fa-pot',
