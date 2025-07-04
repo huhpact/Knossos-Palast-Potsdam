@@ -883,7 +883,7 @@ class MenuManager {
                         vegan: true
                     }
                 ],
-                 'Beilagen': [
+                 'Saucen': [
                     {
                         number: '115',
                         name: 'Metaxasauce',
@@ -905,7 +905,7 @@ class MenuManager {
                         vegan: false
                     }
                 ],
-                 'Beilagen': [
+                 'Desserts': [
                     {
                         number: '135',
                         name: 'Griechischer Joghurt',
