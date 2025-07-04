@@ -529,29 +529,851 @@ class MenuManager {
                         vegetarian: false,
                         vegan: false
                     },
+                   {
+                        number: '61',
+                        name: 'Potsdamer Teller',
+                        price: '27,90',
+                        description: 'Gyros, Lammsteak, Kalbsleber und Schweinefiletmedaillons, serviert mit Zaziki und Knoblauchkartoffeln',
+                        image: '/images/potsdamer.webp',
+                        labels: ['Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '62',
+                        name: 'Meteora Piato',
+                        price: '28,90',
+                        description: 'zarter Lammspieß vom Grill, Kalbsleber, Gyros mit Zaziki und Kartoffelngratin',
+                        image: '/images/meteora.jpg',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'aufgetaute Fleischprodukte', 'Milch', 'Senf'],
+                        vegetarian: false,
+                        vegan: false
+                    },
                 ],
-                'Desserts': [
+                'Schnitzel': [
                     {
-                        number: '90',
-                        name: 'Baklava',
-                        price: '6.50',
-                        description: 'Traditionelles Blätterteiggebäck mit Nüssen und Honig',
-                        image: 'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Gluten', 'Nüsse', 'Eier'],
+                        number: '70',
+                        name: 'Schweineschnitzel',
+                        price: '20,90',
+                        description: 'paniertes Schweineschnitzel mit Pommes Frites',
+                        image: '/images/schnitzel.jpg',
+                        labels: [],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '71',
+                        name: '+ Metaxasauce',
+                        price: '3,00',
+                        description: '',
+                        image: '/images/metaxasauce.webp',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
                         vegetarian: true,
                         vegan: false
                     },
                     {
-                        number: '91',
-                        name: 'Galaktoboureko',
-                        price: '7.20',
-                        description: 'Blätterteig mit Grießpudding und Zitronensirup',
-                        image: 'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=400',
-                        labels: ['Gluten', 'Milch', 'Eier'],
+                        number: '72',
+                        name: '+ Champignonrahmsauce',
+                        price: '3,90',
+                        description: '',
+                        image: '/images/champignon.webp',
+                        labels: ['glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '',
+                        name: '+ gemischter Salat',
+                        price: '4,50',
+                        description: '',
+                        image: '/images/salat.jpeg',
+                        labels: [],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                ],
+                 'Traditionelle griechische Küche': [
+                    {
+                        number: '73',
+                        name: 'Stifado',
+                        price: '26,90',
+                        description: 'Gebackenes Lammfleisch im eigenen Saft geschmort mit Zwiebeln und Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/stifado.webp',
+                        labels: ['Konservierungsstoffe'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '75',
+                        name: 'Lamm mit Riesenbohnen',
+                        price: '26,90',
+                        description: 'Im eigenen Saft geschmort mit griechischen Nudeln, mit Käse überbacken, mit Knoblauch',
+                        image: '/images/lamm.webp',
+                        labels: ['Konservierungsstoffe', 'Antioxidationsmittel', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '76',
+                        name: 'Moussaka',
+                        price: '3,90',
+                        description: 'Traditioneller griechischer Auflauf mit Auberginen, Kartoffeln, Béchamelsauce, Hackfleisch und mit Käse verfeinert, mit Knoblauch',
+                        image: '/images/moussaka.avif',
+                        labels: ['glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '77',
+                        name: 'Moussaka vegetarisch',
+                        price: '21,50',
+                        description: 'Traditioneller griechischer Auflauf mit Auberginen, Kartoffeln, Béchamelsauce, Karotten, Champignons und mit Käse verfeinert',
+                        image: '/images/moussaka.avif',
+                        labels: ['glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '78',
+                        name: 'Gemüsepfanne mit Kritharaki',
+                        price: '20,50',
+                        description: 'verschiedene Gemüse mit griechischen Reisnudeln in Basilikum-Tomaten-Sauce und geriebenem Gauda sowie original griechischem Fetakäse',
+                        image: '/images/gemuesepfanne.jpg',
+                        labels: ['Konservierungsstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '79',
+                        name: 'Lachanika Kaseri',
+                        price: '21,90',
+                        description: 'verschiedenes Gemüse in Champignonssauce, mit Käse überbacken',
+                        image: '/images/lachanika.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    
+                ],
+                 'Überbackenes': [
+                    {
+                        number: '94',
+                        name: 'Rollakia überbacken',
+                        price: '25,90',
+                        description: 'panierte Steakröllchen gefüllt mit Fetakäse und Tomaten, mit Metaxasauce und Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/ueberbacken-1.jpeg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '95',
+                        name: 'Gyros',
+                        price: '26,90',
+                        description: 'mit Metaxasauce und Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/gyros-ueberbacken.webp',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '96',
+                        name: 'Hähnchenbrustfilet',
+                        price: '23,50',
+                        description: 'mit Metaxasauce und Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/haehnchen-ueberbacken.avif',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '97',
+                        name: 'Schweinefilet',
+                        price: '25,90',
+                        description: 'mit Metaxasauce und Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/schweinefilet-ueberbacken.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '98',
+                        name: 'Souvlaki überbacken',
+                        price: '24,90',
+                        description: 'mit Metaxasauce und Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/souvlaki-ueberbacken.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '99',
+                        name: 'Bifteki überbacken',
+                        price: '24,50',
+                        description: 'Hackfleischsteak vom Grill, gefüllt mit Feta, in Metaxasauce und mit Edamerkäse überbacken, dazu Knoblauchkartoffeln',
+                        image: '/images/bifteki.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                ],
+                 'Pfännchen-Spezialitäten': [
+                    {
+                        number: '86',
+                        name: 'Pfännchen Rhodos',
+                        price: '26,90',
+                        description: 'Schweinefilet in Champignonrahmsauce verfeinert, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/schweinefilet-pfanne.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '88',
+                        name: 'Pfännchen Naxos',
+                        price: '25,90',
+                        description: 'Hähnchenbrustfilet in Metaxasauce, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/haehnchen-metaxa.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '89',
+                        name: 'Pfännchen Meteora',
+                        price: '34,50',
+                        description: 'Lammfilet in Metaxasauce, dazu Rosmarinkartoffeln, mit Knoblauch',
+                        image: '/images/lammfilet.jpg',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    }
+                ],
+                 'Fischspezialitäten': [
+                    {
+                        number: '110',
+                        name: 'Kalamari',
+                        price: '24,90',
+                        description: 'frisch gebraten, dazu Zitronen-Knoblauchsauce, griechische Reisnudeln und Zaziki',
+                        image: '/images/kalamari.jpg',
+                        labels: ['Konservierungsstoffe', 'aufgetaute Fischprodukte', 'glutenhaltig', 'Milch', 'Schalenfrüchte', 'Weichtiere'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '111',
+                        name: 'Kalamari - klein',
+                        price: '16,90',
+                        description: 'frisch gebraten, dazu Zitronen-Knoblauchsauce, griechische Reisnudeln und Zaziki',
+                        image: '/images/kalamari.jpg',
+                        labels: ['Konservierungsstoffe', 'aufgetaute Fischprodukte', 'glutenhaltig', 'Milch', 'Schalenfrüchte', 'Weichtiere'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '112',
+                        name: 'Lachsfilet',
+                        price: '28,90',
+                        description: 'frisch gebraten, dazu Zitronen-Knoblauchsauce, frisches Gemüse und Rosmarinkartoffeln',
+                        image: '/images/lachsfilet.jpg',
+                        labels: ['Konservierungsstoffe', 'aufgetaute Fischprodukte', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                    {
+                        number: '113',
+                        name: 'Zanderfilet',
+                        price: '28,90',
+                        description: 'frisch gebraten, dazu Zitronen-Knoblauchsauce, frisches Gemüse und Rosmarinkartoffeln',
+                        image: '/images/zanderfilet.jpg',
+                        labels: ['Konservierungsstoffe', 'aufgetaute Fischprodukte', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    },
+                     {
+                        number: '114',
+                        name: 'Zanderfilet - klein',
+                        price: '17,90',
+                        description: 'frisch gebraten, dazu Zitronen-Knoblauchsauce, frisches Gemüse und Rosmarinkartoffeln',
+                        image: '/images/zanderfilet.jpg',
+                        labels: ['Konservierungsstoffe', 'aufgetaute Fischprodukte', 'glutenhaltig', 'Milch'],
+                        vegetarian: false,
+                        vegan: false
+                    }
+                ],
+                 'Beilagen': [
+                    {
+                        number: '125',
+                        name: 'Pommes Frites',
+                        price: '5,50',
+                        description: '',
+                        image: '/images/frites.jpeg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '127',
+                        name: 'Kroketten',
+                        price: '5,90',
+                        description: '',
+                        image: '/images/kroketten.jpeg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '128',
+                        name: 'Griechische Reisnudeln',
+                        price: '6,90',
+                        description: '',
+                        image: '/images/griechische-reisnudeln.jpg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '129',
+                        name: 'Backkartoffeln mit Sauerrahm',
+                        price: '8,90',
+                        description: '',
+                        image: '/images/ofenkartoffel.webp',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '130',
+                        name: 'Knoblauchkartoffeln',
+                        price: '6,90',
+                        description: '',
+                        image: '/images/knoblauchkartoffeln.jpg',
+                        labels: [],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '131',
+                        name: 'Kartoffelgratin',
+                        price: '8,90',
+                        description: '',
+                        image: '/images/kartoffelgratin.jpg',
+                        labels: ['Konservierungsstoffe', 'Süßungsmittel', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '132',
+                        name: 'Frisches Gemüse',
+                        price: '7,10',
+                        description: '',
+                        image: '/images/frisches-gemuese.webp',
+                        labels: [],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '133',
+                        name: 'Rosmarinkartoffeln',
+                        price: '7,50',
+                        description: '',
+                        image: '/images/rosmarinkartoffeln.jpg',
+                        labels: [],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                 'Beilagen': [
+                    {
+                        number: '115',
+                        name: 'Metaxasauce',
+                        price: '5,90',
+                        description: '',
+                        image: '/images/metaxasauce.webp',
+                        labels: ['Farbstoffe', 'glutenhaltig', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '116',
+                        name: 'Champignonrahmsauce',
+                        price: '6,50',
+                        description: '',
+                        image: '/images/champignonrahmsauce.webp',
+                        labels: ['glutenhaltig', 'Milch'],
                         vegetarian: true,
                         vegan: false
                     }
-                ]
+                ],
+                 'Beilagen': [
+                    {
+                        number: '135',
+                        name: 'Griechischer Joghurt',
+                        price: '8,20',
+                        description: 'mit Walnuss und Honig',
+                        image: '/images/griechischer-joghurt.avif',
+                        labels: ['Konservierungsstoffe', 'Milch', 'Schalenfrüchte', 'Walnuss'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                    {
+                        number: '136',
+                        name: 'Galaktoboureko mit Eis',
+                        price: '8,50',
+                        description: 'Blätterteig mit Gries-Vanillecreme und Vanilleeis',
+                        image: '/images/galaktoboureko.jpg',
+                        labels: ['Konservierungsstoffe', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    },
+                     {
+                        number: '137',
+                        name: 'Crema Vanille',
+                        price: '8,90',
+                        description: 'Panna Cotta mit hausgemachter Schlagsahnecreme mit Vanille, serviert mit Marmelade aus frischen Früchten',
+                        image: '/images/panna-cotta.jpg',
+                        labels: ['Konservierungsstoffe', 'Milch'],
+                        vegetarian: true,
+                        vegan: false
+                    }
+                ],
+                 'Weißweine': [
+                    {
+                        number: '250',
+                        name: 'Weißer Hauswein',
+                        price: '6,90',
+                        description: '0,2l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/weisser-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '251',
+                        name: 'Weißer Hauswein',
+                        price: '14,90',
+                        description: '0,5l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/weisser-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '252',
+                        name: 'Weißer Hauswein',
+                        price: '22,90',
+                        description: 'Flasche 0,75l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/weisser-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '253',
+                        name: 'Imiglikos',
+                        price: '7,90',
+                        description: '0,2l - lieblich, leicht, fruchtbetont - 🇬🇷 - 12,5% vol',
+                        image: '/images/Imiglikos.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '254',
+                        name: 'Imiglikos',
+                        price: '24,90',
+                        description: 'Flasche 0,75l - lieblich, leicht, fruchtbetont - 🇬🇷 - 12,5% vol',
+                        image: '/images/Imiglikos.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '255',
+                        name: 'Vilana',
+                        price: '7,90',
+                        description: '0,2l - fruchtige Aromen von Zitrusfrüchten & Blumen - 🇬🇷 - 12,5% vol \n Empfehlung: Genießen Sie ihn als Aperitif oder zu weißem Fleisch und Salat.',
+                        image: '/images/vilana.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '256',
+                        name: 'Vilana',
+                        price: '23,90',
+                        description: 'Flasche 0,75l - fruchtige Aromen von Zitrusfrüchten & Blumen - 🇬🇷 - 12,5% vol \n Empfehlung: Genießen Sie ihn als Aperitif oder zu weißem Fleisch und Salat.',
+                        image: '/images/vilana.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '257',
+                        name: 'Lyrarakis Weiß',
+                        price: '8,90',
+                        description: '0,2l - aromatischer Weißwein - 🇬🇷 - 12,5% vol \n Empfehlung: Meeresfrüchte, helles Fleisch und Fisch mit leichten Soßen oder einfach als Aperitif.',
+                        image: '/images/Lyrarakis.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '258',
+                        name: 'Lyrarakis Weiß',
+                        price: '26,90',
+                        description: 'Flasche 0,75l - aromatischer Weißwein - 🇬🇷 - 12,5% vol \n Empfehlung: Meeresfrüchte, helles Fleisch und Fisch mit leichten Soßen oder einfach als Aperitif.',
+                        image: '/images/Lyrarakis.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '259',
+                        name: 'Assyrtiko Voila',
+                        price: '9,50',
+                        description: '0,2l - Trockener Wein - 🇬🇷 - 13,5% vol \n Empfehlung: Passt wunderbar zu mediterranen Gerichten und besonders zu Fisch und Meeresfrüchten',
+                        image: '/images/Assyrtiko.webp',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '260',
+                        name: 'Assyrtiko Voila',
+                        price: '28,90',
+                        description: 'Flasche 0,75l - Trockener Wein - 🇬🇷 - 13,5% vol \n Empfehlung: Passt wunderbar zu mediterranen Gerichten und besonders zu Fisch und Meeresfrüchten',
+                        image: '/images/Assyrtiko.webp',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                ],
+                 'Roséweine': [
+                    {
+                        number: '261',
+                        name: 'Rosé Hauswein',
+                        price: '7,90',
+                        description: '0,2l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/rosé-hauswein.png',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '262',
+                        name: 'Rosé Hauswein',
+                        price: '14,90',
+                        description: '0,5l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/rosé-hauswein.png',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '263',
+                        name: 'Rosé Hauswein',
+                        price: '23,90',
+                        description: 'Flasche 0,75l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/rosé-hauswein.png',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                 'Rotweine': [
+                    {
+                        number: '264',
+                        name: 'Roter Hauswein',
+                        price: '6,90',
+                        description: '0,2l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/roter-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '265',
+                        name: 'Roter Hauswein',
+                        price: '14,90',
+                        description: '0,5l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/roter-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '266',
+                        name: 'Roter Hauswein',
+                        price: '23,90',
+                        description: 'Flasche 0,75l - leicht trocken - 🇬🇷 - 12,5% vol',
+                        image: '/images/roter-hauswein.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '267',
+                        name: 'Imiglikos',
+                        price: '7,90',
+                        description: '0,2l - Aromen von getrockneten Früchten und Gewürzen - 🇬🇷 - 12% vol \n Empfehlung: Begleitet harmonisch Früchte, süße Speisen und süß-saure Saucen.',
+                        image: '/images/Imiglikos.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '268',
+                        name: 'Imiglikos',
+                        price: '24,90',
+                        description: 'Flasche 0,75l - Aromen von getrockneten Früchten und Gewürzen - 🇬🇷 - 12% vol \n Empfehlung: Begleitet harmonisch Früchte, süße Speisen und süß-saure Saucen.',
+                        image: '/images/Imiglikos.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '269',
+                        name: 'Kotsifali',
+                        price: '7,90',
+                        description: '0,2l - Gewürze, rote Früchte & pikanter Nachgeschmack - 🇬🇷 - 13% vol \n Empfehlung: Genießen Sie ihn zu mediterranen Gerichten, Fleisch vom Grill und pikanten Käsesorten.',
+                        image: '/images/kotsifali.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '270',
+                        name: 'Kotsifali',
+                        price: '24,90',
+                        description: 'Flasche 0,75l - Gewürze, rote Früchte & pikanter Nachgeschmack - 🇬🇷 - 13% vol \n Empfehlung: Genießen Sie ihn zu mediterranen Gerichten, Fleisch vom Grill und pikanten Käsesorten.',
+                        image: '/images/kotsifali.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '271',
+                        name: 'Lyrarakis Rot',
+                        price: '8,90',
+                        description: '0,2l - Gewürze, rote Früchte & pikanter Nachgeschmack - 🇬🇷 - 13% vol \n Empfehlung: Genießen Sie ihn zu mediterranen Gerichten, Fleisch vom Grill und pikanten Käsesorten.',
+                        image: '/images/lyrarakis.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '272',
+                        name: 'Lyrarakis Rot',
+                        price: '26,90',
+                        description: 'Flasche 0,75l - Gewürze, rote Früchte & pikanter Nachgeschmack - 🇬🇷 - 13% vol \n Empfehlung: Genießen Sie ihn zu mediterranen Gerichten, Fleisch vom Grill und pikanten Käsesorten.',
+                        image: '/images/lyrarakis.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                'Flaschen-Weißweine': [
+                    {
+                        number: '280',
+                        name: 'Malagouzia Alpha',
+                        price: '28,90',
+                        description: 'Flasche 0,75l - Nuancen von Citrus und Pfirsich - 🇬🇷 - 13% vol',
+                        image: '/images/malagouzia-alpha.webp',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '281',
+                        name: 'Chardon. Papaioannou',
+                        price: '29,50',
+                        description: 'Flasche 0,75l - Aromen von Banane und Aprikose - 🇬🇷 - 14% vol',
+                        image: '/images/chardon-Papaioannou',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '282',
+                        name: 'Sauvig. Blanc Aidarinis',
+                        price: '29,90',
+                        description: 'Flasche 0,75l - Holunder und Kräuter im Aroma - 🇬🇷 - 13,5% vol',
+                        image: '/images/Sauvig-Blanc-Aidarinis',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '283',
+                        name: 'Thema',
+                        price: '33,90',
+                        description: 'Flasche 0,75l - Aromen reifer Sommerfrüchte wie Ananas, Mango, Honigmelone - 🇬🇷 - 13% vol',
+                        image: '/images/thema.jpeg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                'Flaschen-Roséweine': [
+                    {
+                        number: '284',
+                        name: 'Mikri Kivotos',
+                        price: '30,90',
+                        description: 'Flasche 0,75l - rosé, trocken, frisch, Aromen nach Rosen und Beeren - 🇬🇷 - 13% vol',
+                        image: '/images/mikri.webp',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                'Flaschen-Rotweine': [
+                    {
+                        number: '285',
+                        name: 'Nemea Gofas O.P.A.P.',
+                        price: '31,90',
+                        description: 'Flasche 0,75l - Aromen aus roten Früchten, sehr elegant - 🇬🇷 - 13,5% vol',
+                        image: '/images/nemea.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '286',
+                        name: 'Kotsifali – Syrah',
+                        price: '32,90',
+                        description: 'Flasche 0,75l - trocken mit beerigen Nuancen, geröstete Nüsse & Zimt - 🇬🇷 - 13,5% vol',
+                        image: '/images/nemea.jpg',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '287',
+                        name: 'Merlot - Cabernet',
+                        price: '33,90',
+                        description: 'Flasche 0,75l - Waldfrüchte, dunkle Schokolade, Cassis, Vanille & elegant - 🇬🇷 - 14,3% vol',
+                        image: '/images/merlot.webp',
+                        labels: ['Schwefeldioxide & Sulfite'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                ],
+                 'Fassbier': [
+                    {
+                        number: '201',
+                        name: 'Bitburger Pils',
+                        price: '4,90',
+                        description: '0,4l',
+                        image: '/images/bitburger-pils.jpg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '202',
+                        name: 'Benediktiner Hell',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/benediktiner-hell.jpg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '203',
+                        name: 'Alsterwasser',
+                        price: '4,90',
+                        description: '0,4l',
+                        image: '/images/alsterwasser.jpg',
+                        labels: ['glutenhaltig', 'Konservierungsstoffe'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '204',
+                        name: 'Weihenstephan Weißbier',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/weihenstephan-weißbier.webp',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '205',
+                        name: 'Russ',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/russ.jpg',
+                        labels: [],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                ],
+                'Flaschenbier': [
+                    {
+                        number: '206',
+                        name: 'Bitburger alkoholfrei',
+                        price: '4,70',
+                        description: '0,33l',
+                        image: '/images/bitburger-alkofrei.webp',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '207',
+                        name: 'Kostritzer',
+                        price: '4,70',
+                        description: '0,33l',
+                        image: '/images/Kostritzer.jpg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '208',
+                        name: 'Weihenstephaner Dunkelweizen',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/.jpg',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '209',
+                        name: 'Weihenstephaner Kristallweizen',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/.webp',
+                        labels: ['glutenhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '210',
+                        name: 'Weihenst. Weizen alk.-frei',
+                        price: '5,90',
+                        description: '0,5l',
+                        image: '/images/.jpg',
+                        labels: ['glutenhaltig', 'Eiweiss'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '211',
+                        name: 'Kandi Malz Malzbier',
+                        price: '4,90',
+                        description: '0,33l',
+                        image: '/images/.jpg',
+                        labels: ['glutenhaltig', 'Farbstoffe'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                
             },
             kinderkarte: {
                 'Kinderkarte': [
@@ -805,7 +1627,7 @@ class MenuManager {
             'Beilagen': 'fas fa-plate-wheat',
             'Saucen': 'fas fa-bottle-droplet',
             'Desserts': 'fas fa-cake-candles',
-            'Weissweine': 'fas fa-wine-bottle',
+            'Weißweine': 'fas fa-wine-bottle',
             'Roséweine': 'fas fa-wine-bottle',
             'Rotweine': 'fas fa-wine-bottle',
             'Kaffee und Tee': 'fas fa-mug-hot',
@@ -816,9 +1638,9 @@ class MenuManager {
             'Longdrinks': 'fas fa-martini-glass',
             'Spirituosen': 'fas fa-whiskey-glass',
             'Schorlen': 'fas fa-glass-water-droplet',
-            'Flaschen-Weissweine': 'fas fa-wine-bottle',
+            'Flaschen-Weißweine': 'fas fa-wine-bottle',
             'Flaschen-Roséweine': 'fas fa-wine-bottle',
-            'Flaschenrotweine': 'fas fa-wine-bottle',
+            'Flaschen-Rotweine': 'fas fa-wine-bottle',
             'Kinderkarte': 'fas fa-child',
             'Eis': 'fas fa-ice-cream',
             'Dessert': 'fas fa-cake',
