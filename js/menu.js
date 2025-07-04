@@ -1373,6 +1373,110 @@ class MenuManager {
                         vegan: true
                     }
                 ],
+                'Longdrinks': [
+                    {
+                        number: '240',
+                        name: "Gin Tonic (Hendrick's)",
+                        price: '12,50',
+                        description: '',
+                        image: '/images/.webp',
+                        labels: ['Farbstoffe', 'Konservierungsstoffe', 'chininhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '241',
+                        name: 'Wodka Lemon',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['chininhaltig'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '242',
+                        name: 'Wodka Red Bull',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['Farbstoffe', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '243',
+                        name: 'Whiskey Cola',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.webp',
+                        labels: ['Farbstoffe', 'Geschmacksverstärker', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '244',
+                        name: 'Cuba Libre',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['Farbstoffe', 'Geschmacksverstärker', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
+                 'Kaffee und Tee': [
+                    {
+                        number: '150',
+                        name: "Tasse Kaffee",
+                        price: '3,50',
+                        description: '',
+                        image: '/images/.webp',
+                        labels: ['Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '151',
+                        name: 'Espresso',
+                        price: '3,20',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                    {
+                        number: '152',
+                        name: 'Doppio Espresso',
+                        price: '5,10',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['Farbstoffe', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '243',
+                        name: 'Whiskey Cola',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.webp',
+                        labels: ['Farbstoffe', 'Geschmacksverstärker', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    },
+                     {
+                        number: '244',
+                        name: 'Cuba Libre',
+                        price: '9,90',
+                        description: '',
+                        image: '/images/.jpg',
+                        labels: ['Farbstoffe', 'Geschmacksverstärker', 'Konservierungsstoffe', 'Süßungsmittel', 'Koffein'],
+                        vegetarian: true,
+                        vegan: true
+                    }
+                ],
                 
             },
             kinderkarte: {

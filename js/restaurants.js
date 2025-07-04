@@ -245,30 +245,3 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('🏛️ Restaurants page initialized with advanced animations');
 });
-
-window.addEventListener('error', (e) => {
-    console.error('Restaurants page error:', e.error);
-    
-    const errorNotification = document.createElement('div');
-    errorNotification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ef4444;
-        color: white;
-        padding: 16px 24px;
-        border-radius: 12px;
-        box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
-        z-index: 9999;
-        font-family: var(--font-primary);
-        font-weight: 600;
-        animation: slideInRight 0.3s ease;
-    `;
-    errorNotification.textContent = 'Ein Fehler ist aufgetreten. Bitte laden Sie die Seite neu.';
-    
-    document.body.appendChild(errorNotification);
-    
-    setTimeout(() => {
-        errorNotification.remove();
-    }, 5000);
-});

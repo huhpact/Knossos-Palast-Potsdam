@@ -782,91 +782,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-fast);
 }
 
-  .knossos-reservation-section {
-            padding: var(--space-4xl) 0;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--white) 50%, var(--light-gray) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .knossos-reservation-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(circle at 2px 2px, var(--royal-blue) 1px, transparent 0);
-            background-size: 60px 60px;
-            opacity: 0.03;
-            z-index: 0;
-        }
-
-        .knossos-reservation-container {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 var(--space-lg);
-        }
-
-        .knossos-reservation-header {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-
-        .knossos-reservation-title {
-            font-family: var(--font-heading);
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--royal-blue);
-            margin-bottom: var(--space-md);
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            position: relative;
-        }
-
-        .knossos-reservation-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--deep-blue), var(--light-blue));
-            border-radius: 2px;
-        }
-
-        .knossos-reservation-subtitle {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--medium-gray);
-            margin-bottom: var(--space-lg);
-            line-height: 1.5;
-            font-weight: 400;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .knossos-form-wrapper {
-            background: var(--white);
-            border-radius: var(--radius-xl);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-            border: 1px solid rgba(92, 15, 20, 0.1);
-        }
-
-        .knossos-form-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--deep-blue), var(--primary-gold));
-        }
 
         .knossos-form-header {
             background: linear-gradient(135deg, var(--deep-blue), var(--dark-wine));
@@ -3565,3 +3480,367 @@ h1, h2, h3, h4, h5, h6 {
         right: -100%;
     }
 }
+
+.reservation-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.method-card.online {
+    width: 100%;
+    order: 1;
+}
+
+.method-card.phone {
+    width: 100%;
+    order: 2;
+}
+.knossos-form-wrapper {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(92, 15, 20, 0.1);
+    width: 100%;
+    max-width: none;
+}
+
+.knossos-reservation-form {
+    padding: var(--space-lg);
+}
+
+.knossos-form-row {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.knossos-form-row:nth-child(1) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.knossos-form-row:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.knossos-form-row:nth-child(3) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.knossos-form-group:has(.knossos-form-textarea) {
+    grid-column: 1 / -1;
+}
+
+.knossos-form-input,
+.knossos-form-textarea {
+    width: 100%;
+    padding: var(--space-sm) var(--space-sm) var(--space-sm) calc(var(--space-sm) * 3);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    background: var(--white);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    min-height: 50px;
+}
+
+.knossos-form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.method-card.phone {
+    background: var(--cream);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    margin-top: var(--space-lg);
+}
+
+.phone-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.phone-number,
+.phone-hours {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.phone-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+}
+
+.knossos-form-submit.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+    .phone-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-methods {
+        gap: var(--space-lg);
+    }
+
+     #toast-container {
+        left: 20px;
+        right: 20px;
+    }
+    
+    .toast {
+        min-width: unset;
+        max-width: unset;
+    }
+    
+    .knossos-form-row:nth-child(1) {
+        grid-template-columns: 1fr; 
+    }
+    
+    .knossos-form-row:nth-child(2) {
+        grid-template-columns: 1fr 1fr; 
+    }
+    
+    .knossos-form-row:nth-child(3) {
+        grid-template-columns: 1fr 1fr; 
+    }
+    
+    .knossos-reservation-form {
+        padding: var(--space-md);
+    }
+    
+    .knossos-form-header {
+        padding: var(--space-md);
+    }
+    
+    .contact-info {
+        gap: var(--space-sm);
+    }
+    
+    .phone-number,
+    .phone-hours {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm);
+    }
+    
+    .method-card {
+        padding: var(--space-lg);
+    }
+    
+    .method-card.phone {
+        padding: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .knossos-reservation-section {
+        padding: var(--space-xl) 0;
+    }
+    
+    
+    .knossos-form-row {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-sm);
+    }
+    
+    .knossos-reservation-form {
+        padding: var(--space-sm);
+    }
+    
+    .knossos-form-header {
+        padding: var(--space-sm);
+    }
+    
+    .knossos-form-input,
+    .knossos-form-textarea {
+        padding: var(--space-xs) var(--space-xs) var(--space-xs) calc(var(--space-xs) * 2.5);
+        font-size: 0.9rem;
+        min-height: 45px;
+    }
+    
+    .knossos-form-icon-left {
+        left: var(--space-xs);
+        font-size: 0.9rem;
+    }
+    
+    .knossos-form-submit {
+        padding: var(--space-sm);
+        font-size: 0.9rem;
+    }
+    
+    .method-card.phone {
+        padding: var(--space-sm);
+    }
+    
+    .phone-number,
+    .phone-hours {
+        padding: var(--space-xs);
+    }
+    
+    .number-icon,
+    .hours-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+.reservation .reservation-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.knossos-form-input.error,
+.knossos-form-textarea.error {
+    border-color: #e74c3c;
+    background: #fdf2f2;
+}
+
+.knossos-form-input.error:focus,
+.knossos-form-textarea.error:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast.error {
+    border-left: 4px solid #e74c3c;
+}
+
+.toast.success {
+    border-left: 4px solid #27ae60;
+}
+
+.toast.warning {
+    border-left: 4px solid #f39c12;
+}
+
+.toast-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.toast.error .toast-icon {
+    color: #e74c3c;
+}
+
+.toast.success .toast-icon {
+    color: #27ae60;
+}
+
+.toast.warning .toast-icon {
+    color: #f39c12;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #2c3e50;
+}
+
+.toast-message {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.toast-close:hover {
+    color: #7f8c8d;
+    background: #f8f9fa;
+}
+

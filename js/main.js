@@ -787,3 +787,390 @@ if ('performance' in window) {
         }, 0);
     });
 }
+
+class ReservationFormValidator {
+    constructor() {
+        this.form = document.getElementById('reservationForm');
+        this.toastContainer = document.getElementById('toast-container');
+        this.errors = {};
+        this.isSubmitting = false;
+        
+        this.init();
+    }
+    
+    init() {
+        this.bindEvents();
+        this.setMinDate();
+    }
+    
+    bindEvents() {
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => this.validateField(input));
+            input.addEventListener('input', () => this.clearFieldError(input));
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('toast-close')) {
+                this.closeToast(e.target.closest('.toast'));
+            }
+        });
+    }
+    
+    setMinDate() {
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        const minDate = tomorrow.toISOString().split('T')[0];
+        dateInput.setAttribute('min', minDate);
+    }
+    
+    async handleSubmit(e) {
+        e.preventDefault();
+        
+        if (this.isSubmitting) return;
+        
+        const isValid = this.validateForm();
+        
+        if (!isValid) {
+            this.showToast('error', 'Formular unvollständig', 'Bitte korrigieren Sie die markierten Felder.');
+            return;
+        }
+        
+        this.setSubmitLoading(true);
+        
+        try {
+            const formData = new FormData(this.form);
+            const response = await fetch(this.form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                this.showToast('success', 'Reservierung erfolgreich!', 'Wir haben Ihre Reservierung erhalten und werden Sie kontaktieren.');
+                this.form.reset();
+                this.clearAllErrors();
+            } else {
+                throw new Error('Fehler beim Senden der Reservierung');
+            }
+            
+        } catch (error) {
+            this.showToast('error', 'Fehler beim Senden', 'Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.');
+        } finally {
+            this.setSubmitLoading(false);
+        }
+    }
+    
+    validateForm() {
+        let isValid = true;
+        this.errors = {};
+
+        const fields = [
+            { id: 'name', validator: this.validateName },
+            { id: 'email', validator: this.validateEmail },
+            { id: 'phone', validator: this.validatePhone },
+            { id: 'guests', validator: this.validateGuests },
+            { id: 'date', validator: this.validateDate },
+            { id: 'time', validator: this.validateTime }
+        ];
+        
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            if (!field.validator.call(this, input)) {
+                isValid = false;
+            }
+        });
+        
+        return isValid;
+    }
+    
+    validateField(input) {
+        const validators = {
+            'name': this.validateName,
+            'email': this.validateEmail,
+            'phone': this.validatePhone,
+            'guests': this.validateGuests,
+            'date': this.validateDate,
+            'time': this.validateTime
+        };
+        
+        const validator = validators[input.id];
+        if (validator) {
+            return validator.call(this, input);
+        }
+        
+        return true;
+    }
+    
+    validateName(input) {
+        const value = input.value.trim();
+        
+        if (!value) {
+            this.setFieldError(input, 'Name ist erforderlich');
+            return false;
+        }
+        
+        if (value.length < 2) {
+            this.setFieldError(input, 'Name muss mindestens 2 Zeichen lang sein');
+            return false;
+        }
+        
+        if (!/^[a-zA-ZäöüÄÖÜß\s-]+$/.test(value)) {
+            this.setFieldError(input, 'Name darf nur Buchstaben, Leerzeichen und Bindestriche enthalten');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    validateEmail(input) {
+        const value = input.value.trim();
+        
+        if (!value) {
+            this.setFieldError(input, 'E-Mail-Adresse ist erforderlich');
+            return false;
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            this.setFieldError(input, 'Bitte geben Sie eine gültige E-Mail-Adresse ein');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    validatePhone(input) {
+        const value = input.value.trim();
+        
+        if (!value) {
+            this.setFieldError(input, 'Telefonnummer ist erforderlich');
+            return false;
+        }
+        
+        const numericValue = value.replace(/[^\d]/g, '');
+        
+        if (numericValue.length < 10) {
+            this.setFieldError(input, 'Telefonnummer muss mindestens 10 Ziffern haben');
+            return false;
+        }
+        
+        if (numericValue.length > 15) {
+            this.setFieldError(input, 'Telefonnummer darf maximal 15 Ziffern haben');
+            return false;
+        }
+        
+        const phoneRegex = /^(\+49|0049|0)[1-9][0-9]{8,14}$/;
+        if (!phoneRegex.test(value.replace(/[\s\-\(\)]/g, ''))) {
+            this.setFieldError(input, 'Bitte geben Sie eine gültige deutsche Telefonnummer ein');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    validateGuests(input) {
+        const value = parseInt(input.value);
+        
+        if (!value || isNaN(value)) {
+            this.setFieldError(input, 'Anzahl der Personen ist erforderlich');
+            return false;
+        }
+        
+        if (value < 1) {
+            this.setFieldError(input, 'Mindestens 1 Person erforderlich');
+            return false;
+        }
+        
+        if (value > 20) {
+            this.setFieldError(input, 'Maximal 20 Personen möglich');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    validateDate(input) {
+        const value = input.value;
+        
+        if (!value) {
+            this.setFieldError(input, 'Datum ist erforderlich');
+            return false;
+        }
+        
+        const selectedDate = new Date(value);
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        today.setHours(0, 0, 0, 0);
+        tomorrow.setHours(0, 0, 0, 0);
+        selectedDate.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < tomorrow) {
+            this.setFieldError(input, 'Reservierung ist erst ab morgen möglich');
+            return false;
+        }
+        
+        const maxDate = new Date(today);
+        maxDate.setMonth(maxDate.getMonth() + 3);
+        
+        if (selectedDate > maxDate) {
+            this.setFieldError(input, 'Reservierung ist maximal 3 Monate im Voraus möglich');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    validateTime(input) {
+        const value = input.value;
+        
+        if (!value) {
+            this.setFieldError(input, 'Uhrzeit ist erforderlich');
+            return false;
+        }
+        
+        const [hours, minutes] = value.split(':').map(Number);
+        
+        if (hours < 12 || hours > 22) {
+            this.setFieldError(input, 'Reservierung nur zwischen 12:00 und 22:00 Uhr möglich');
+            return false;
+        }
+        
+        if (hours === 21 && minutes > 30) {
+            this.setFieldError(input, 'Letzte Reservierung um 21:30 Uhr');
+            return false;
+        }
+        
+        this.clearFieldError(input);
+        return true;
+    }
+    
+    setFieldError(input, message) {
+        const errorElement = document.getElementById(input.id + '-error');
+        if (errorElement) {
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+        
+        input.classList.add('error');
+        this.errors[input.id] = message;
+    }
+    
+    clearFieldError(input) {
+        const errorElement = document.getElementById(input.id + '-error');
+        if (errorElement) {
+            errorElement.classList.remove('show');
+            errorElement.textContent = '';
+        }
+        
+        input.classList.remove('error');
+        delete this.errors[input.id];
+    }
+    
+    clearAllErrors() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            this.clearFieldError(input);
+        });
+    }
+    
+    showToast(type, title, message) {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        
+        const iconClass = {
+            'success': 'fas fa-check-circle',
+            'error': 'fas fa-exclamation-circle',
+            'warning': 'fas fa-exclamation-triangle'
+        };
+        
+        toast.innerHTML = `
+            <div class="toast-icon">
+                <i class="${iconClass[type]}"></i>
+            </div>
+            <div class="toast-content">
+                <div class="toast-title">${title}</div>
+                <div class="toast-message">${message}</div>
+            </div>
+            <button class="toast-close" type="button">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        
+        this.toastContainer.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 100);
+        
+        setTimeout(() => {
+            this.closeToast(toast);
+        }, 5000);
+    }
+    
+    closeToast(toast) {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.parentNode.removeChild(toast);
+            }
+        }, 300);
+    }
+    
+    setSubmitLoading(loading) {
+        const submitButton = this.form.querySelector('.knossos-form-submit');
+        const submitIcon = submitButton.querySelector('i');
+        
+        if (loading) {
+            submitButton.classList.add('loading');
+            submitButton.disabled = true;
+            submitIcon.className = 'fas fa-spinner fa-spin';
+            this.isSubmitting = true;
+        } else {
+            submitButton.classList.remove('loading');
+            submitButton.disabled = false;
+            submitIcon.className = 'fas fa-calendar-check';
+            this.isSubmitting = false;
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new ReservationFormValidator();
+});
+
+function formatPhoneNumber(input) {
+    let value = input.value.replace(/\D/g, '');
+    
+    if (value.startsWith('49')) {
+        value = '+49 ' + value.slice(2);
+    } else if (value.startsWith('0')) {
+        value = '+49 ' + value.slice(1);
+    }
+    
+    const formatted = value.replace(/(\+49\s?)(\d{3})(\d{4})(\d{4})/, '$1$2 $3 $4');
+    input.value = formatted;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', (e) => {
+            formatPhoneNumber(e.target);
+        });
+    }
+});

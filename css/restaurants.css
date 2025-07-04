@@ -380,6 +380,7 @@
 .overlay-content h3 {
     font-family: var(--font-heading);
     font-size: 1.4rem;
+    color: white;
     font-weight: 700;
     margin-bottom: 12px;
     line-height: 1.3;
