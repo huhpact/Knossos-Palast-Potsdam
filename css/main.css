@@ -3844,3 +3844,27 @@ h1, h2, h3, h4, h5, h6 {
     background: #f8f9fa;
 }
 
+.credit {
+	font-family: "Roboto Mono", monospace;
+	font-size: 13px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.credit a {
+	display: flex;
+	align-items: center;
+}
+
+.img__credit {
+	height: 20px;
+	margin-left: 5px;
+	transition: var(--transition-smooth);
+}
+
+.img__credit:hover {
+	transform: scale(1.1);
+}
